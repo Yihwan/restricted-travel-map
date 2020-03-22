@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SEO from 'src/components/seo';
+import ReactTooltip from 'react-tooltip';
 
 import Layout from 'src/components/layout';
-import Home from 'src/components/home';
+import Map from 'src/components/map';
 
-const HomePage = () => (
-  <Layout>
-    <SEO title="Y5" />
-    <Home />
-  </Layout>
-)
+const HomePage = () => {
+  const [content, setContent] = useState('');
+
+  return(
+    <Layout>
+      <SEO title="Restricted Travel Map" />
+      <div>
+        <Map setTooltipContent={setContent} />
+        <ReactTooltip>{content}</ReactTooltip>
+      </div>
+    </Layout>
+  );
+}
 
 export default HomePage;
