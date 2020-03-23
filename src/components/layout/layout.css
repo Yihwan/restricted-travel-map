@@ -57,3 +57,11 @@ table {
 	border-spacing: 0;
 }
 
+svg {
+  display: inline-block;
+	vertical-align: middle;
+}
+
+path:focus {
+	outline: none;
+}

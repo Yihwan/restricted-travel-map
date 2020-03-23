@@ -1,0 +1,70 @@
+.DetailModal__Overlay {
+  position: fixed;
+  z-index: 2;
+  top: 0; 
+  right: 0; 
+  left: 0;
+  bottom: 0; 
+
+  background: rgba(0, 0, 0, 0);
+
+  transition: background 250ms ease-out;
+}
+
+.DetailModal__Overlay--after-open {
+  background: rgba(0, 0, 0, 0.8); 
+}
+
+.DetailModal__Overlay--before-close {
+  background: rgba(0, 0, 0, 0); 
+}
+
+@media (min-width: 768px) {
+  .DetailModal__Overlay {
+    right: 24px;
+    left: 70%;
+    background: transparent;
+  }
+}
+
+.DetailModal__Content {
+  position: absolute;
+  z-index: 3;
+  background-color: paleturquoise;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  top: 100%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  transition: top 250ms ease-out;
+}
+
+.DetailModal__Content--after-open {
+  top: 3rem;
+  opacity: 1;
+}
+
+.DetailModal__Content--before-close{
+  top: 100%;
+}
+
+@media (min-width: 768px) {
+  .DetailModal__Content {
+    min-width: 456px;
+    max-width: 576px;
+    border-radius: 0.5rem;
+    right: 1rem;
+    left: unset;
+  }
+
+  .DetailModal__Content--after-open {
+    top: 4rem;
+    bottom: 4rem;
+    opacity: 1;
+  }
+
+  .DetailModal__Content--before-close{
+    top: 100%;
+  }
+}

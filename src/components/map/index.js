@@ -1,69 +1,125 @@
 import React, { memo } from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 import { 
-  ComposableMap, Geographies, Geography
- } from 'react-simple-maps';
+  ComposableMap, ZoomableGroup, Geographies, Geography
+} from 'react-simple-maps';
+import { PatternLines } from "@vx/pattern";
+
+import STYLE_CONSTANTS from 'src/gatsby-plugin-theme-ui';
+import Tooltip from 'src/components/tooltip';
+
+import { MapContainer, GeographyWrapper } from './style';
+import { createCountryMetaData, generateHeatMapColors } from './utils';
 
 const geoUrl = 'https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json';
 
-const rounded = num => {
-  if (num > 1000000000) {
-    return Math.round(num / 100000000) / 10 + "Bn";
-  } else if (num > 1000000) {
-    return Math.round(num / 100000) / 10 + "M";
-  } else {
-    return Math.round(num / 100) / 10 + "K";
-  }
-};
-
-// NAME: "United States of America"
-// NAME_LONG: "United States"
-// ABBREV: "U.S.A."
-// FORMAL_EN: "United States of America"
-// POP_EST: 326625791
-// POP_RANK: 17
-// GDP_MD_EST: 18560000
-// POP_YEAR: 2017
-// GDP_YEAR: 2016
-// ISO_A2: "US"
-// ISO_A3: "USA"
-// CONTINENT: "North America"
-// REGION_UN: "Americas"
-// SUBREGION: "Northern America"
-
-const Map = ({ setTooltipContent }) => (
-  <ComposableMap data-tip="">
-    <Geographies geography={geoUrl}>
-      {({ geographies }) =>
-        geographies.map(geo => (
-          <Geography 
-            key={geo.rsmKey} 
-            geography={geo}
-            onMouseEnter={() => {
-              const { NAME, POP_EST } = geo.properties;
-              setTooltipContent(`${NAME} — ${rounded(POP_EST)}`);
-            }}
-            onMouseLeave={() => {
-              setTooltipContent("");
-            }}
-            style={{
-              default: {
-                fill: "#D6D6DA",
-                outline: "none"
-              },
-              hover: {
-                fill: "#F53",
-                outline: "none"
-              },
-              pressed: {
-                fill: "#E42",
-                outline: "none"
-              }
-            }}
-          />
-        ))
+const Map = ({ setTooltipContent, selectedCountryISO3, setSelectedCountryISO3 }) => {
+  const countryMetaDataQuery = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark {
+        nodes {
+          frontmatter {
+            title
+            ISO3
+            isInboundRestricted
+            isInboundLandRestricted
+            isInboundCompletelyRestricted
+            inboundRestrictedCountriesISO3
+          }
+        }
       }
-    </Geographies>
-  </ComposableMap>
-)
+    }
+  `);
 
+  const countryMetaData = createCountryMetaData(countryMetaDataQuery);
+
+  // TODO: Fix missing countries. 
+  return(
+    <MapContainer>
+      <ComposableMap 
+        data-tip="" 
+        style={{
+          width: "100%",
+          height: "100%",
+        }}
+      >
+        <PatternLines
+          id="lines"
+          height={8}
+          width={8}
+          stroke="#a80097"
+          strokeWidth={2}
+          background={STYLE_CONSTANTS.colors.heat}
+          orientation={["diagonal"]}
+        />
+        <ZoomableGroup center={[10, 10]}>
+          <Geographies geography={geoUrl}>
+            {({ geographies }) =>
+              geographies.filter(geo => countryMetaData[geo.properties.ISO_A3]).map(geo => {
+                const country = countryMetaData[geo.properties.ISO_A3];
+                const selectedCountry = countryMetaData[selectedCountryISO3];
+
+                const { 
+                  fillColor, fillOpacity, strokeColor, strokeWidth,
+                } = generateHeatMapColors(
+                  country, 
+                  selectedCountry,
+                );
+
+                const { 
+                  title,
+                  isInboundRestricted, 
+                  isInboundLandRestricted, 
+                  isInboundCompletelyRestricted,
+                } = country; 
+                
+                return(
+                  <GeographyWrapper
+                    key={geo.rsmKey}
+                    fillColor={fillColor}
+                    fillOpacity={fillOpacity}
+                    strokeColor={strokeColor}
+                    strokeWidth={strokeWidth}
+                  >
+                    <Geography
+                      geography={geo}
+                      onMouseEnter={() => {
+                        setTooltipContent(
+                          <Tooltip 
+                            countryName={title}
+                            isInboundRestricted={isInboundRestricted}
+                            isInboundLandRestricted={isInboundLandRestricted}
+                            isInboundCompletelyRestricted={isInboundCompletelyRestricted}
+                          />
+                        );
+                      }}
+                      onMouseLeave={() => {
+                        setTooltipContent('');
+                      }}
+                      onClick={() => { 
+                        if (selectedCountryISO3 === geo.properties.ISO_A3) {
+                          setSelectedCountryISO3(null);
+                          return;
+                        }
+
+                        setSelectedCountryISO3(geo.properties.ISO_A3) 
+                      }}
+                      style={{
+                        pressed: {
+                          fill: "#E42",
+                          outline: "none"
+                        }
+                      }}
+                    />
+                  </GeographyWrapper>
+                );
+              })
+            }
+          </Geographies>
+        </ZoomableGroup>
+      </ComposableMap>
+    </MapContainer>
+  );
+}
+  
 export default memo(Map); 
