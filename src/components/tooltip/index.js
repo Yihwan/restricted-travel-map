@@ -19,7 +19,7 @@ const Tooltip = ({
       <BadgeContainer>
         {!isInboundRestricted && 
           <Badge 
-            accent={STYLE_CONSTANTS.colors.defaultBorder}
+            accent="#000000"
             background="rgb(87, 87, 87, 0.9)"
           >
             No restrictions reported
@@ -27,7 +27,7 @@ const Tooltip = ({
         }
         {isInboundRestricted && 
           <Badge 
-            accent={STYLE_CONSTANTS.colors.heat}
+            accent="#69120f"
             background="rgb(222, 45, 38, 0.9)"
           >
             Restrictions reported
@@ -35,7 +35,7 @@ const Tooltip = ({
         }
         {isInboundLandRestricted && 
           <Badge 
-            accent={STYLE_CONSTANTS.colors.heat}
+            accent="#69120f"
             background="rgb(222, 45, 38, 0.9)"
           >
             Land border restrictions reported
@@ -43,7 +43,7 @@ const Tooltip = ({
         }
         {isInboundCompletelyRestricted && 
           <Badge 
-            accent="rgb(168, 0, 151, 1)"
+            accent="#750069"
             background={`repeating-linear-gradient(
               135deg,
               rgb(222, 45, 38, 0.9),
