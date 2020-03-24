@@ -32,8 +32,8 @@ const About = () => {
 
         <p>
           Please understand that while I do my best to keep this site reliably updated,
-          I can't guarantee to the accuracy or recency of any available information.
-          You can read the full Terms of Use of this site <Link to="/terms">here</Link>.
+          I can't guarantee the accuracy or recency of any available information.
+          You can read the full Terms of Use <Link to="/terms">here</Link>.
         </p>
 
         <p>

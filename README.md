@@ -1,6 +1,8 @@
 # Restricted Travel Map 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/06e3de82-2927-4417-9292-318a82d29dcc/deploy-status)](https://app.netlify.com/sites/restrictedtravel/deploys)
 
+![restrictedtravelmap.com](static/images/covid19_travel_restriction_screencap.jpg)
+
 Hi, I'm Yihwan 👋
 
 I'm a developer from San Francisco. Like much of the world, I was taken 
@@ -15,8 +17,8 @@ and <a href="https://www.theguardian.com/travel/2020/mar/23/coronavirus-travel-u
 around the world using <a href="https://forms.gle/Z9giq891zqekY43J8" target="_blank" rel="noopener noreferrer">this form</a>. 
 
 Please understand that while I do my best to keep this site reliably updated, 
-I can't guarantee to the accuracy or recency of any available information. 
-You can read the full Terms of Use of this site here. 
+I can't guarantee the accuracy or recency of any available information. 
+You can read the full Terms of Use [here](https://restrictedtravelmap.com/terms). 
 
 I know these are scary times, but I also know that we'll make it through this. 
 Let's be kind to one another, and remember to wash 🧼 your 👏 hands ✨! 
