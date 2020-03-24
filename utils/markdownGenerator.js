@@ -96,14 +96,19 @@ inboundRestrictedCountriesISO3: [${data.inboundRestrictedCountriesISO3.map(iso =
 
         const initialContent = 
 `
-# ${data.title}
+# <h2 class="ModalContent__Header">${data.title}</h2>
 
-* ${!data.isInboundRestricted ? `There is no travel restriction data available for ${data.title}.` : `${data.title} has reportedly imposed travel restrictions.`}
+* ${!data.isInboundRestricted ? `<div class="Badge ModalContent__Badge--NoRestrictions">No restrictions reported</div>` : `<div class="Badge ModalContent__Badge--PartialRestrictions">Restrictions reported</div>`}
 `; 
 
         const footer = 
 `
-*DISCLAIMER*: Enter disclaimer text here.
+<br/><p><strong>DISCLAIMER:</strong> Enter disclaimer text here.</p>
+`;
+        const submissions =
+`
+<h3 class="ModalContent__SubHeader">Share your story</h3>
+<p>Would you like to share how travel restrictions have affected you? Has the situation changed from what is currently on this map? <br/><br/><strong>Submit your story or any corrections <a href="" target="_blank" rel="noopener">https://forms.gle/9WuvQPAHg4ReRZLN6</a><strong></p>
 `;
 
         const filename = data.title.split(' ').join('').concat('.md');
@@ -113,18 +118,18 @@ inboundRestrictedCountriesISO3: [${data.inboundRestrictedCountriesISO3.map(iso =
           fs.appendFileSync(`${mdWriteToFilePath}/${filename}`, initialContent)
 
           if (data.isInboundLandRestricted) {
-            fs.appendFileSync(`${mdWriteToFilePath}/${filename}`, `* ${data.title} may have imposed additional travel restrictions on land borders.\n`)
+            fs.appendFileSync(`${mdWriteToFilePath}/${filename}`, `* <div class="Badge ModalContent__Badge--LandRestrictions">Land border restrictions reported</div>\n`)
           }
 
           if (data.isInboundCompletelyRestricted) {
-            fs.appendFileSync(`${mdWriteToFilePath}/${filename}`, `* ${data.title} is reported to have completely shut down inbound travel.\n`)
+            fs.appendFileSync(`${mdWriteToFilePath}/${filename}`, `* <div class="Badge ModalContent__Badge--CompleteRestrictions">Entry may be completely restricted</div>\n`)
           }
 
           if (data.inboundRestrictedCountriesISO3.length > 0) {
             const restrictedCountrySection =
 `
-## Restricted Countries 
-${data.title} has reportedly restricted travel from at least ${data.inboundRestrictedCountriesISO3.length} countries: ${data.inboundRestrictedCountriesISO3.sort().map(iso => countries.isoNameMap[iso]).join(', ')}
+## <h3 class="ModalContent__SubHeader">Restricted Countries</h3>
+<p>${data.title} has reportedly restricted travel from at least <strong>${data.inboundRestrictedCountriesISO3.length}</strong> countries: ${data.inboundRestrictedCountriesISO3.sort().map(iso => countries.isoNameMap[iso]).join(', ')}</p>
 `;
             fs.appendFileSync(`${mdWriteToFilePath}/${filename}`, restrictedCountrySection)
           }

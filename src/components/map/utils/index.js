@@ -1,9 +1,4 @@
-import { scaleLinear } from "d3-scale";
 import STYLE_CONSTANTS from 'src/gatsby-plugin-theme-ui';
-
-const opacityScale = scaleLinear()
-  .domain([0, 193])
-  .range([0, STYLE_CONSTANTS.opacity.quarternary]);
 
 export const rounded = num => {
   if (num > 1000000000) {
@@ -25,7 +20,7 @@ export const generateHeatMapColors = (
   let strokeWidth = STYLE_CONSTANTS.stroke.normal;
 
   if (selectedCountry) {
-    if (selectedCountry.inboundRestrictedCountriesISO3.includes(ISO3)) {
+    if (selectedCountry.inboundRestrictedCountriesISO3 && selectedCountry.inboundRestrictedCountriesISO3.includes(ISO3)) {
       fillColor = STYLE_CONSTANTS.colors.heat;
       strokeColor = STYLE_CONSTANTS.colors.heat;
       strokeWidth = STYLE_CONSTANTS.stroke.normal;

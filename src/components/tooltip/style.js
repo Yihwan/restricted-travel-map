@@ -3,15 +3,27 @@ import styled from '@emotion/styled';
 import { SPACER } from 'src/constants';
 
 export const TooltipContainer = styled.div`
-  display: flex; 
-  flex-direction: column; 
-  align-content: flex-start;
-  font-size: 1rem;
+  margin: ${SPACER.x2small} -${SPACER.small};
 `;
 
+export const BadgeContainer = styled.div`
+  margin-top: 12px;
+  
+  display: flex; 
+  flex-direction: column;
+`;
+
+export const Badge = styled.span`
+  margin-bottom: 2px;
+  font-weight: 500;
+  padding: ${SPACER.xsmall} ${SPACER.small};
+  background: ${({ background }) => background };
+  border-left: 4px solid ${({ accent }) => accent};
+`;
+  
 export const CountryName = styled.h2`
   font-weight: bold;
-  font-size: 1.25rem;
+  font-size: 1rem;
 `;
 
 export const TooltipItem = styled.div`

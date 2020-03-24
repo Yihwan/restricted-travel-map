@@ -1,4 +1,6 @@
 import styled from '@emotion/styled';
+import { css } from '@emotion/core';
+import { Link } from 'gatsby';
 
 import { MEDIA_QUERIES, SPACER } from 'src/constants';
 
@@ -23,7 +25,7 @@ export const FooterContainer = styled.div`
 export const LegendContainer = styled.div`
   font-size: 12px; 
   margin: 0 auto;
-  margin-bottom: ${SPACER.base};
+  text-align: center;
 
   ${MEDIA_QUERIES.mdUp} {
     font-size: 14px;
@@ -37,11 +39,9 @@ export const LegendContainer = styled.div`
 
 export const LegendItem = styled.div`
   display: flex; 
-  margin: 0 ${SPACER.base};
+
   align-items: center;
   position: relative; 
-
-
 
   > div:first-of-type {
     position: absolute;
@@ -60,26 +60,47 @@ export const LegendItem = styled.div`
     ${MEDIA_QUERIES.mdUp} {
       margin-left: 28px;
     }
+
+    margin-right: 24px;
   }
 `;
 
+export const DisclaimerContainer = styled.div`
+  margin: ${SPACER.large} 0;
+  margin-top: 12px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+
+  ${MEDIA_QUERIES.mdUp} {
+    margin: unset;
+    margin-right: 24px;
+  }
+`;
+
+export const TermsLink = styled(Link)`
+  text-decoration: none; 
+  font-weight: bold;
+  color: rgb(36, 108, 240, 1);
+`;
 
 export const Footer = styled.footer`
   display: flex;
 
   justify-content: space-around;
+  align-items: center;
 
 `;
   
-export const StyledLink = styled.a`
+const baseLinkStyles = css`
   display: block;
   background: rgb(36, 108, 240, 0.25);
   border-left: 4px solid rgb(36, 108, 240, 1);
-  text-decoration: none; 
+  text-decoration: none;
   color: unset;
   font-weight: 600;
 
-  font-size: 12px; 
+  font-size: 12px;
   padding: ${SPACER.small} 0.75rem;
 
   ${MEDIA_QUERIES.mdUp} {
@@ -87,5 +108,13 @@ export const StyledLink = styled.a`
     padding: ${SPACER.small} ${SPACER.base};
     margin: ${SPACER.x2small} ${SPACER.small};
   }
+`;
+
+export const StyledInternalLink = styled(Link)`
+  ${baseLinkStyles}
+`;
+
+export const StyledLink = styled.a`
+  ${baseLinkStyles}
 `;
 

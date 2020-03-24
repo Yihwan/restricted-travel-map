@@ -11,6 +11,11 @@
   transition: background 250ms ease-out;
 }
 
+.DetailModal__Content:focus {
+  outline: none;
+  box-shadow: 0 0 2px 2px rgb(255, 191, 68, 0.5);
+}
+
 .DetailModal__Overlay--after-open {
   background: rgba(0, 0, 0, 0.8); 
 }
@@ -28,9 +33,10 @@
 }
 
 .DetailModal__Content {
+  background: rgb(0, 0, 0, 0.85);
+  color: white;
   position: absolute;
   z-index: 3;
-  background-color: paleturquoise;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   top: 100%;
@@ -53,7 +59,7 @@
   .DetailModal__Content {
     min-width: 456px;
     max-width: 576px;
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
     right: 1rem;
     left: unset;
   }

@@ -37,6 +37,7 @@ const Home = () => {
                 inboundRestrictedCountriesISO3
               }
               html
+              htmlAst
             }
           }
         }
@@ -67,7 +68,7 @@ const Home = () => {
         setSelectedCountryISO3={setSelectedCountryISO3}
       />
 
-      <ReactTooltip place="right">{content}</ReactTooltip>
+      <ReactTooltip>{content}</ReactTooltip>
 
       <HomeFooter selectedCountry={selectedCountry}/>
     </>

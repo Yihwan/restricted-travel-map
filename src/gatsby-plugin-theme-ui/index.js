@@ -7,6 +7,18 @@ export default {
       bg: 'background',
     },
   },
+  badges: {
+    noRestrictions: {
+      color: 'text',
+      bg: 'transparent',
+      boxShadow: 'inset 0 0 0 1px',
+    },
+    outline: {
+      color: 'primary',
+      bg: 'transparent',
+      boxShadow: 'inset 0 0 0 1px',
+    },
+  },
   stroke: {
     normal: '0.25',
     bold: '0.5',

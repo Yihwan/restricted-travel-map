@@ -8,8 +8,11 @@ import {
   FooterContainer, 
   LegendContainer, 
   LegendItem,
+  DisclaimerContainer,
+  TermsLink,
   Footer, 
   StyledLink,
+  StyledInternalLink,
 } from './style';
 
 const modes = [
@@ -22,7 +25,7 @@ const modes = [
 // TODO: Replace !important with styled prop if needed
 
 const HomeFooter = ({ selectedCountry }) => {
-  const [mode, setMode] = useColorMode()
+  const [mode, setMode] = useColorMode();
 
   return(
     <FooterContainer>
@@ -79,34 +82,41 @@ const HomeFooter = ({ selectedCountry }) => {
           {mode}
         </Button>
       </LegendContainer>
+
+      <DisclaimerContainer>
+        <TermsLink to="/terms">TERMS OF USE</TermsLink> — Always check with your local embassy or consular service to receive travel information.
+      </DisclaimerContainer>
+      
       <Footer>
-        <StyledLink
-          href="https://twitter.com/yihwan"
-          target="_blank"
-          rel="noopener"
+        <StyledInternalLink
+          to="/about"
         >
           About
-      </StyledLink>
-        <StyledLink>Github</StyledLink>
+      </StyledInternalLink>
+        <StyledLink
+          href="https://github.com/Yihwan/restricted-travel-map"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Github
+        </StyledLink>
         <StyledLink
           href="https://twitter.com/yihwan"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
         >
           Twitter
       </StyledLink>
-        <StyledLink
-          href="https://twitter.com/yihwan"
-          target="_blank"
-          rel="noopener"
+        <StyledInternalLink
+          to="/privacy"
           css={css`
-          background: rgb(87, 18, 15, 0.9) !important; 
-          border-left: 4px solid ${STYLE_CONSTANTS.colors.heat} !important;
+          background: ${STYLE_CONSTANTS.colors.defaultCountry} !important; 
+          border-left: 4px solid ${STYLE_CONSTANTS.colors.defaultBorder} !important;
           color: white !important;
         `}
         >
-          Disclaimer
-      </StyledLink>
+          Privacy Policy
+      </StyledInternalLink>
       </Footer>
     </FooterContainer>
   );

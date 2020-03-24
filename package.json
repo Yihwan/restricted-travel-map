@@ -10,7 +10,6 @@
     "@mdx-js/react": "^1.5.7",
     "@vx/pattern": "0.0.195",
     "csv-parser": "^2.3.2",
-    "d3-scale": "^3.2.1",
     "gatsby": "^2.19.7",
     "gatsby-image": "^2.2.39",
     "gatsby-plugin-emotion": "^4.2.0",
