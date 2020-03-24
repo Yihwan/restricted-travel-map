@@ -4,10 +4,6 @@ import { SPACER } from 'src/constants';
 
 export const TooltipContainer = styled.div`
   margin: ${SPACER.x2small} -${SPACER.small};
-  padding: ${SPACER.small} 0.75rem;
-  background-color: background: rgb(0, 0, 0, 0.85);
-
-  border-radius: 2px;
 `;
 
 export const BadgeContainer = styled.div`

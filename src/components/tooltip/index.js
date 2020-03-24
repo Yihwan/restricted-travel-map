@@ -20,7 +20,7 @@ const Tooltip = ({
         {!isInboundRestricted && 
           <Badge 
             accent={STYLE_CONSTANTS.colors.defaultBorder}
-            background="rgb(87, 87, 87, 0.5)"
+            background="rgb(87, 87, 87, 0.9)"
           >
             No restrictions reported
           </Badge>
@@ -28,7 +28,7 @@ const Tooltip = ({
         {isInboundRestricted && 
           <Badge 
             accent={STYLE_CONSTANTS.colors.heat}
-            background="rgb(222, 45, 38, 0.25)"
+            background="rgb(222, 45, 38, 0.9)"
           >
             Restrictions reported
           </Badge>
@@ -36,7 +36,7 @@ const Tooltip = ({
         {isInboundLandRestricted && 
           <Badge 
             accent={STYLE_CONSTANTS.colors.heat}
-            background="rgb(222, 45, 38, 0.25)"
+            background="rgb(222, 45, 38, 0.9)"
           >
             Land border restrictions reported
           </Badge>
@@ -46,10 +46,10 @@ const Tooltip = ({
             accent="rgb(168, 0, 151, 1)"
             background={`repeating-linear-gradient(
               135deg,
-              rgb(222, 45, 38, 0.5),
-              rgb(222, 45, 38, 0.5) 7px,
-              rgb(168, 0, 151, 0.5) 4px,
-              rgb(168, 0, 151, 0.5) 11px
+              rgb(222, 45, 38, 0.9),
+              rgb(222, 45, 38, 0.9) 7px,
+              rgb(168, 0, 151, 0.9) 4px,
+              rgb(168, 0, 151, 0.9) 11px
             )`}
           >
             Entry may be completed restricted
