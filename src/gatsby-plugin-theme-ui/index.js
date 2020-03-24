@@ -40,13 +40,10 @@ export default {
     selectedCountry: '#ffbf44', // selected / hover (yellow)
     defaultBorder: '#575757', // border 
 
-
-
-
     modes: {
-      light: {
+      times: {
         text: '#000000',
-        background: '#ffffff',
+        background: '#fff1e6',
         selectedCountry: '#3333ee',
         heat: '#111199',
         defaultCountry: '#f6f6f6',
@@ -65,7 +62,7 @@ export default {
         defaultCountry: 'hsla(230, 20%, 0%, 20%)',
         gray: 'hsl(210, 50%, 60%)',
       },
-      swiss: {
+      light: {
         text: 'hsl(10, 20%, 20%)',
         background: 'hsl(10, 10%, 98%)',
         selectedCountry: 'hsl(10, 80%, 50%)',

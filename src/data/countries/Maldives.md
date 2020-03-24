@@ -7,11 +7,15 @@ isInboundCompletelyRestricted: false
 inboundRestrictedCountriesISO3: ["CHN","ITA","BGD","IRN","MYS","GBR","DEU","FRA","KOR"]
 ---
 
-# Maldives
+# <h2 class="ModalContent__Header">Maldives</h2>
 
-* Maldives has reportedly imposed travel restrictions.
+* <div class="Badge ModalContent__Badge--PartialRestrictions">Restrictions reported</div>
 
-## Restricted Countries 
-Maldives has reportedly restricted travel from at least 9 countries: Bangladesh, China, Germany, France, United Kingdom, Iran, Italy, South Korea, Malaysia
+<h3 class="ModalContent__SubHeader">Share your story</h3>
+<p>Want to share how travel restrictions have affected you? Has the situation changed from what is currently on this map? <br/><br/><strong>Submit your story or any corrections <a href="https://forms.gle/9WuvQPAHg4ReRZLN6" target="_blank" rel="noopener noreferrer">here</a></strong></p>
 
-*DISCLAIMER*: Enter disclaimer text here.
+## <h3 class="ModalContent__SubHeader">Restricted Countries</h3>
+<p>Maldives has reportedly restricted travel from at least <strong>9</strong> countries: Bangladesh, China, Germany, France, United Kingdom, Iran, Italy, South Korea, Malaysia</p>
+
+<p>Last updated 23 March 2020.</p>
+<p><strong><a href="https://restrictedtravelmap.com/terms" target="_blank" rel="noopener noreferrer">TERMS OF USE</a></strong> — Always check with your local embassy or consular service to receive travel information.</p>

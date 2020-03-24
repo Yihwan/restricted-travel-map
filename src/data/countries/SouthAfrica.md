@@ -7,11 +7,15 @@ isInboundCompletelyRestricted: false
 inboundRestrictedCountriesISO3: ["ITA","IRN","KOR","ESP","DEU","FRA","CHE","USA","GBR","CHN"]
 ---
 
-# South Africa
+# <h2 class="ModalContent__Header">South Africa</h2>
 
-* South Africa has reportedly imposed travel restrictions.
+* <div class="Badge ModalContent__Badge--PartialRestrictions">Restrictions reported</div>
 
-## Restricted Countries 
-South Africa has reportedly restricted travel from at least 10 countries: Switzerland, China, Germany, Spain, France, United Kingdom, Iran, Italy, South Korea, United States
+<h3 class="ModalContent__SubHeader">Share your story</h3>
+<p>Want to share how travel restrictions have affected you? Has the situation changed from what is currently on this map? <br/><br/><strong>Submit your story or any corrections <a href="https://forms.gle/9WuvQPAHg4ReRZLN6" target="_blank" rel="noopener noreferrer">here</a></strong></p>
 
-*DISCLAIMER*: Enter disclaimer text here.
+## <h3 class="ModalContent__SubHeader">Restricted Countries</h3>
+<p>South Africa has reportedly restricted travel from at least <strong>10</strong> countries: Switzerland, China, Germany, Spain, France, United Kingdom, Iran, Italy, South Korea, United States</p>
+
+<p>Last updated 23 March 2020.</p>
+<p><strong><a href="https://restrictedtravelmap.com/terms" target="_blank" rel="noopener noreferrer">TERMS OF USE</a></strong> — Always check with your local embassy or consular service to receive travel information.</p>

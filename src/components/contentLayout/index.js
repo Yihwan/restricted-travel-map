@@ -11,7 +11,7 @@ import {
 const modes = [
   'dark',
   'deep',
-  'swiss',
+  'times',
   'light',
 ];
 
