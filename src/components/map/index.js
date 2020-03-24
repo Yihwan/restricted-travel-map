@@ -144,6 +144,7 @@ const Map = ({ setTooltipContent, selectedCountryISO3, setSelectedCountryISO3 })
             border: '2px solid',
             padding: '4px',
             margin: '4px',
+            cursor: 'pointer',
           }}
           onClick={handleZoomIn}
         >
@@ -164,6 +165,7 @@ const Map = ({ setTooltipContent, selectedCountryISO3, setSelectedCountryISO3 })
             border: '2px solid',
             padding: '4px',
             margin: '4px',
+            cursor: 'pointer',
           }}
           onClick={handleZoomOut}
         >
