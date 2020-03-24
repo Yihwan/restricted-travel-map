@@ -47,17 +47,17 @@ export const NavLink = styled(Link)`
 `;
 
 export const ContentLayoutContainer = styled.main`
-
+  position: absolute;
   padding: ${SPACER.small} ${SPACER.base};
-  margin-top: 200px;
+  top: 200px;
   overflow: scroll;
-  height: 100vh;
+
   max-width: ${BREAKPOINTS.sm}px;
-  margin-bottom: 16px;
+  bottom: 16px;
 
   ${MEDIA_QUERIES.mdUp} {
-    margin-left: 18rem;
-    margin-top: 60px;
+    left: 18rem;
+    top: 60px;
   }
 
   h1 {

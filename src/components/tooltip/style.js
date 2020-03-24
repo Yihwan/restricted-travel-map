@@ -4,6 +4,10 @@ import { SPACER } from 'src/constants';
 
 export const TooltipContainer = styled.div`
   margin: ${SPACER.x2small} -${SPACER.small};
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const BadgeContainer = styled.div`

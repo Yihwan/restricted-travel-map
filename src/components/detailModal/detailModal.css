@@ -24,7 +24,7 @@
   background: rgba(0, 0, 0, 0); 
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .DetailModal__Overlay {
     right: 24px;
     left: 70%;
@@ -58,7 +58,7 @@
   top: 100%;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .DetailModal__Content {
     min-width: 456px;
     max-width: 576px;
