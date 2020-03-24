@@ -31,8 +31,6 @@ export const CloseButton = styled.button`
 export const ContentContainer = styled.div`
   padding: ${SPACER.small} ${SPACER.large};
 
-  overflow: scroll;
-
   .ModalContent__Header {
     font-size: 1.5rem;
     font-weight: 700;

@@ -19,11 +19,19 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            siteUrl: url
+            defaultImage: image
+            twitterUsername
           }
         }
       }
     `
   )
+
+  const seo = {
+    description: site.siteMetadata.description || site.siteMetadata.defaultDescription,
+    image: `${site.siteMetadata.siteUrl}${site.siteMetadata.image || site.siteMetadata.defaultImage}`,
+  }
 
   const metaDescription = description || site.siteMetadata.description
 
@@ -68,7 +76,10 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <meta name="description" content={seo.description} />
+      <meta name="image" content={seo.image} />
+    </Helmet>
   )
 }
 

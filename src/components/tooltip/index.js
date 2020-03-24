@@ -1,7 +1,5 @@
 import React from 'react';
 
-import STYLE_CONSTANTS from 'src/gatsby-plugin-theme-ui';
-
 import {
   TooltipContainer, BadgeContainer, CountryName, Badge,
 } from './style';

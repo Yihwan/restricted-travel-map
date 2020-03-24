@@ -3,6 +3,9 @@ module.exports = {
     title: `Restricted Travel Map`,
     description: `A map that shows global travel restrictions caused by COVID-19 (coronavirus).`,
     author: `@yihwan`,
+    url: `https://restrictedtravelmap.com`,
+    image: "/images/homeTimes.jpg", 
+    twitterUsername: '@yihwan',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

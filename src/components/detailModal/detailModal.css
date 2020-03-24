@@ -4,7 +4,7 @@
   top: 0; 
   right: 0; 
   left: 0;
-  bottom: 0; 
+  bottom: 0;
 
   background: rgba(0, 0, 0, 0);
 
@@ -44,6 +44,9 @@
   right: 0;
   left: 0;
   transition: top 250ms ease-out;
+
+  max-height: 90vh;
+  overflow: scroll;
 }
 
 .DetailModal__Content--after-open {
