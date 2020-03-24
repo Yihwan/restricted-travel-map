@@ -34,6 +34,8 @@ const Terms = () => {
         <p>
           In no event, related to use of the website or otherwise, shall the developer be held liable for any claim, damages, or other liabilities. 
         </p>
+
+        <p>The source code of the website is <a href="https://github.com/Yihwan/restricted-travel-map" target="_blank" rel="noopener noreferrer">open source</a> and licensed under an <a href="https://github.com/Yihwan/restricted-travel-map/blob/master/LICENSE.md" target="_blank" rel="noopener noreferrer">MIT License</a>.</p>
       </section>
     </ContentLayout>
   );

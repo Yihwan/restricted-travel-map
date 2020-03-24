@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Y5.studio`,
-    description: `by Yihwan Kim`,
+    title: `Restricted Travel Map`,
+    description: `A map that shows global travel restrictions caused by COVID-19 (coronavirus).`,
     author: `@yihwan`,
   },
   plugins: [

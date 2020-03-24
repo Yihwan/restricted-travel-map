@@ -1,4 +1,5 @@
 # Restricted Travel Map 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/06e3de82-2927-4417-9292-318a82d29dcc/deploy-status)](https://app.netlify.com/sites/restricted-travel-map/deploys)
 
 Hi, I'm Yihwan 👋
 
@@ -22,9 +23,9 @@ Let's be kind to one another, and remember to wash 🧼 your 👏 hands ✨!
 
 — <a href="https://yihwan.kim" target="_blank" rel="noopener noreferrer">yihwan.kim</a>
 
-These countries are currently not shown due to invalid ISO A3 code: 
+These countries are currently not shown due to invalid an invalid ISO A3 ("-99") code from the `react-simple-maps` source URL: 
 * Northern Cyprus 
 * Kosovo 
 * Somaliland
 
-Puerto Rico was considered part of the United States. Antartica was not added because it made the map look bad.
+Puerto Rico was considered part of the United States. Antartica was taken out because it made the map look bad. Sorry Antarctica!

@@ -9,7 +9,7 @@ const HomePage = () => {
 
   return(
     <Layout>
-      <SEO title="Restricted Travel Map" />
+      <SEO title="COVID-19" />
       <Home />
     </Layout>
   );
