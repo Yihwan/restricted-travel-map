@@ -1,5 +1,5 @@
 # Restricted Travel Map 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/06e3de82-2927-4417-9292-318a82d29dcc/deploy-status)](https://app.netlify.com/sites/restricted-travel-map/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/06e3de82-2927-4417-9292-318a82d29dcc/deploy-status)](https://app.netlify.com/sites/restrictedtravel/deploys)
 
 Hi, I'm Yihwan 👋
 

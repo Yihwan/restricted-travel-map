@@ -68,7 +68,7 @@ const Home = () => {
         setSelectedCountryISO3={setSelectedCountryISO3}
       />
 
-      <ReactTooltip>{content}</ReactTooltip>
+      <ReactTooltip className="ReactTooltipHidden">{content}</ReactTooltip>
 
       <HomeFooter selectedCountry={selectedCountry}/>
     </>

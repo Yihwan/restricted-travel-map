@@ -12,10 +12,6 @@ import {
 Modal.setAppElement('#___gatsby')
 
 const DetailModal = ({ selectedCountry, setSelectedCountryISO3 }) => {
-  if (!selectedCountry) {
-    return null;
-  }
-  
   return(
     <Modal
       isOpen={!!selectedCountry}
@@ -39,7 +35,7 @@ const DetailModal = ({ selectedCountry, setSelectedCountryISO3 }) => {
         </ModalButtonContainer>
         <ContentContainer>
 
-          <div dangerouslySetInnerHTML={{ __html: selectedCountry.html }} />
+          <div dangerouslySetInnerHTML={{ __html: selectedCountry && selectedCountry.html }} />
         </ContentContainer>
       </ModalInnerContainer>
     </Modal>
