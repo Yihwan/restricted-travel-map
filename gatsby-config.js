@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: `Restricted Travel Map`,
-    description: `A map that shows global travel restrictions caused by COVID-19 (coronavirus).`,
+    description: `An interactive map that tracks global travel restrictions caused by COVID-19 (coronavirus).`,
     author: `@yihwan`,
     url: `https://restrictedtravelmap.com`,
-    image: "/images/homeTimes.jpg", 
+    image: "/images/covid19_travel_restriction_screencap.jpg", 
     twitterUsername: '@yihwan',
   },
   plugins: [
