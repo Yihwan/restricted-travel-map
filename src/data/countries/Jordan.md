@@ -18,5 +18,5 @@ inboundRestrictedCountriesISO3: ["FRA","DEU","ESP","ISR","EGY"]
 ## <h3 class="ModalContent__SubHeader">Restricted Countries</h3>
 <p>Jordan has reportedly restricted travel from at least <strong>5</strong> countries: Germany, Egypt, Spain, France, Israel</p>
 
-<p>Last updated 23 March 2020.</p>
+<p>Last updated 02 April 2020.</p>
 <p><strong><a href="https://restrictedtravelmap.com/terms" target="_blank" rel="noopener noreferrer">TERMS OF USE</a></strong> — Always check with your local embassy or consular service to receive travel information.</p>

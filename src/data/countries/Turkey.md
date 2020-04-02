@@ -18,5 +18,5 @@ inboundRestrictedCountriesISO3: ["AGO","AUT","AZE","DZA","BGD","BEL","CMR","CAN"
 ## <h3 class="ModalContent__SubHeader">Restricted Countries</h3>
 <p>Turkey has reportedly restricted travel from at least <strong>66</strong> countries: Angola, United Arab Emirates, Austria, Azerbaijan, Belgium, Bangladesh, Canada, Switzerland, China, Ivory Coast, Cameroon, Colombia, Cyprus, Czech Republic, Germany, Djibouti, Denmark, Dominican Republic, Algeria, Ecuador, Egypt, Spain, Finland, France, United Kingdom, Georgia, Equatorial Guinea, Guatemala, Hungary, India, Ireland, Iran, Iraq, Italy, Jordan, Kazakhstan, Kenya, South Korea, Kuwait, Lebanon, Sri Lanka, Latvia, Morocco, Moldova, Montenegro, Mongolia, Mauritania, Niger, Netherlands, Norway, Nepal, Oman, Panama, Peru, Philippines, Poland, Portugal, Saudi Arabia, Sudan, Slovenia, Sweden, Chad, Tunisia, Taiwan, Ukraine, Uzbekistan</p>
 
-<p>Last updated 23 March 2020.</p>
+<p>Last updated 02 April 2020.</p>
 <p><strong><a href="https://restrictedtravelmap.com/terms" target="_blank" rel="noopener noreferrer">TERMS OF USE</a></strong> — Always check with your local embassy or consular service to receive travel information.</p>

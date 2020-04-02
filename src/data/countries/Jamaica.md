@@ -17,5 +17,5 @@ inboundRestrictedCountriesISO3: ["IRN","CHN","KOR","ITA","SGP","DEU","ESP","FRA"
 ## <h3 class="ModalContent__SubHeader">Restricted Countries</h3>
 <p>Jamaica has reportedly restricted travel from at least <strong>9</strong> countries: China, Germany, Spain, France, United Kingdom, Iran, Italy, South Korea, Singapore</p>
 
-<p>Last updated 23 March 2020.</p>
+<p>Last updated 02 April 2020.</p>
 <p><strong><a href="https://restrictedtravelmap.com/terms" target="_blank" rel="noopener noreferrer">TERMS OF USE</a></strong> — Always check with your local embassy or consular service to receive travel information.</p>

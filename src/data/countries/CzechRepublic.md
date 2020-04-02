@@ -18,5 +18,5 @@ inboundRestrictedCountriesISO3: ["DEU","AUT","ITA","SWE","FRA","NLD","BEL","ESP"
 ## <h3 class="ModalContent__SubHeader">Restricted Countries</h3>
 <p>Czech Republic has reportedly restricted travel from at least <strong>15</strong> countries: Austria, Belgium, Switzerland, China, Germany, Denmark, Spain, France, United Kingdom, Iran, Italy, South Korea, Netherlands, Norway, Sweden</p>
 
-<p>Last updated 23 March 2020.</p>
+<p>Last updated 02 April 2020.</p>
 <p><strong><a href="https://restrictedtravelmap.com/terms" target="_blank" rel="noopener noreferrer">TERMS OF USE</a></strong> — Always check with your local embassy or consular service to receive travel information.</p>

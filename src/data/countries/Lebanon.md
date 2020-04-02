@@ -18,5 +18,5 @@ inboundRestrictedCountriesISO3: ["ITA","IRN","CHN","KOR"]
 ## <h3 class="ModalContent__SubHeader">Restricted Countries</h3>
 <p>Lebanon has reportedly restricted travel from at least <strong>4</strong> countries: China, Iran, Italy, South Korea</p>
 
-<p>Last updated 23 March 2020.</p>
+<p>Last updated 02 April 2020.</p>
 <p><strong><a href="https://restrictedtravelmap.com/terms" target="_blank" rel="noopener noreferrer">TERMS OF USE</a></strong> — Always check with your local embassy or consular service to receive travel information.</p>

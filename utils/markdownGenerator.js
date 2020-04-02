@@ -103,7 +103,7 @@ inboundRestrictedCountriesISO3: [${data.inboundRestrictedCountriesISO3.map(iso =
 
         const footer = 
 `
-<p>Last updated 23 March 2020.</p>
+<p>Last updated 02 April 2020.</p>
 <p><strong><a href="https://restrictedtravelmap.com/terms" target="_blank" rel="noopener noreferrer">TERMS OF USE</a></strong> — Always check with your local embassy or consular service to receive travel information.</p>
 `;
         const submissions =
